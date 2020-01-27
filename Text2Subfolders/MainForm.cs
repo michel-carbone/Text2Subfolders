@@ -29,5 +29,10 @@ namespace Text2Subfolders
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
+
+		private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Application.Exit();
+		}
 	}
 }
