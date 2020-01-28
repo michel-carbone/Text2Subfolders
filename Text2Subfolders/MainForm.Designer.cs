@@ -50,6 +50,7 @@ namespace Text2Subfolders
 			this.textBox2 = new System.Windows.Forms.TextBox();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
 			this.label1 = new System.Windows.Forms.Label();
+			this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
 			this.menuStrip1.SuspendLayout();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
@@ -171,6 +172,7 @@ namespace Text2Subfolders
 			this.button1.TabIndex = 1;
 			this.button1.Text = "Browse";
 			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// textBox2
 			// 
@@ -239,5 +241,6 @@ namespace Text2Subfolders
 		private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
 		private System.Windows.Forms.MenuStrip menuStrip1;
+		private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
 	}
 }
