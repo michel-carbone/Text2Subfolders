@@ -40,5 +40,14 @@ namespace Text2Subfolders
 			folderBrowserDialog1.ShowDialog();
 			textBox2.Text = folderBrowserDialog1.SelectedPath;
 		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			string[] subfolderNames = textBox1.Lines;
+			foreach (string name in subfolderNames)
+			{
+				System.IO.Directory.CreateDirectory(name);
+			}
+		}
 	}
 }
