@@ -39,6 +39,7 @@ namespace Text2Subfolders
 		{
 			folderBrowserDialog1.ShowDialog();
 			textBox2.Text = folderBrowserDialog1.SelectedPath;
+			rootPath = textBox2.Text;
 		}
 
 		private void button2_Click(object sender, EventArgs e)
@@ -46,8 +47,13 @@ namespace Text2Subfolders
 			string[] subfolderNames = textBox1.Lines;
 			foreach (string name in subfolderNames)
 			{
-				System.IO.Directory.CreateDirectory(name);
+				// TODO use system folder delimiter
+				// TODO check for empty lines
+				// TODO check for legal characteres
+				System.IO.Directory.CreateDirectory(rootPath + "\\" + name);
 			}
 		}
+
+		private string rootPath = string.Empty;
 	}
 }
