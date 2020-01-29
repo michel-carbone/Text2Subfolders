@@ -54,6 +54,24 @@ namespace Text2Subfolders
 			}
 		}
 
-		private string rootPath = string.Empty;
+		private string path = "";
+
+		public string rootPath {
+			get { return path; }
+			set { path = value;
+			Properties.Settings.Default.rootPath = path;
+			}
+		}
+
+		private void MainForm_Load(object sender, EventArgs e)
+		{
+			path = Properties.Settings.Default.rootPath;
+		}
+
+		private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			Properties.Settings.Default.rootPath = this.rootPath;
+			Properties.Settings.Default.Save();
+		}
 	}
 }

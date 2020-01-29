@@ -80,7 +80,7 @@ namespace Text2Subfolders
 			// exitToolStripMenuItem
 			// 
 			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-			this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
 			this.exitToolStripMenuItem.Text = "Exit";
 			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
 			// 
@@ -179,10 +179,12 @@ namespace Text2Subfolders
 			// 
 			this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
 						| System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::Text2Subfolders.Properties.Settings.Default, "rootPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
 			this.textBox2.Location = new System.Drawing.Point(6, 22);
 			this.textBox2.Name = "textBox2";
 			this.textBox2.Size = new System.Drawing.Size(185, 20);
 			this.textBox2.TabIndex = 0;
+			this.textBox2.Text = global::Text2Subfolders.Properties.Settings.Default.rootPath;
 			// 
 			// tabPage2
 			// 
@@ -215,6 +217,8 @@ namespace Text2Subfolders
 			this.MainMenuStrip = this.menuStrip1;
 			this.Name = "MainForm";
 			this.Text = "Text2Subfolders";
+			this.Load += new System.EventHandler(this.MainForm_Load);
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
 			this.tabControl1.ResumeLayout(false);
