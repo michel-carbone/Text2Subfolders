@@ -45,12 +45,14 @@ namespace Text2Subfolders
 		private void button2_Click(object sender, EventArgs e)
 		{
 			string[] subfolderNames = textBox1.Lines;
+			// get OS folder delimiter
+			string delimiter = System.IO.Path.DirectorySeparatorChar.ToString();
+			
 			foreach (string name in subfolderNames)
 			{
-				// TODO use system folder delimiter
 				// TODO check for empty lines
-				// TODO check for legal characteres
-				System.IO.Directory.CreateDirectory(rootPath + "\\" + name);
+				// TODO check for legal characters
+				System.IO.Directory.CreateDirectory(rootPath + delimiter + name);
 			}
 		}
 
