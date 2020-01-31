@@ -68,11 +68,17 @@ namespace Text2Subfolders
 		private void MainForm_Load(object sender, EventArgs e)
 		{
 			path = Properties.Settings.Default.rootPath;
+			textBox1.Text = Properties.Settings.Default.subFolders;
+			this.Size = Properties.Settings.Default.mainFormSize;
+			this.Location = Properties.Settings.Default.mainFormLocation;
 		}
 
 		private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			Properties.Settings.Default.rootPath = this.rootPath;
+			Properties.Settings.Default.subFolders = this.textBox1.Text;
+			Properties.Settings.Default.mainFormLocation = this.Location;
+			Properties.Settings.Default.mainFormSize = this.Size;
 			Properties.Settings.Default.Save();
 		}
 	}
