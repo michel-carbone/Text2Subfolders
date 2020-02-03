@@ -185,6 +185,7 @@ namespace Text2Subfolders
 			this.textBox2.Size = new System.Drawing.Size(185, 20);
 			this.textBox2.TabIndex = 0;
 			this.textBox2.Text = global::Text2Subfolders.Properties.Settings.Default.rootPath;
+			this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
 			// 
 			// tabPage2
 			// 

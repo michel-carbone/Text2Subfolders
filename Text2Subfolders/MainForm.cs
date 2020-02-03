@@ -39,7 +39,6 @@ namespace Text2Subfolders
 		{
 			folderBrowserDialog1.ShowDialog();
 			textBox2.Text = folderBrowserDialog1.SelectedPath;
-			rootPath = textBox2.Text;
 		}
 
 		private void button2_Click(object sender, EventArgs e)
@@ -80,6 +79,11 @@ namespace Text2Subfolders
 			Properties.Settings.Default.mainFormLocation = this.Location;
 			Properties.Settings.Default.mainFormSize = this.Size;
 			Properties.Settings.Default.Save();
+		}
+
+		private void textBox2_TextChanged(object sender, EventArgs e)
+		{
+			this.rootPath = textBox2.Text;
 		}
 	}
 }
