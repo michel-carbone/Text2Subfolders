@@ -1,8 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-# SharpDevelop 4.4
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Text2Subfolders", "Text2Subfolders\Text2Subfolders.csproj", "{9B323BB6-D37E-46EA-BE47-D61630A3B8E8}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Text2SubfoldersSetup", "Text2SubfoldersSetup\Text2SubfoldersSetup.vdproj", "{2681DEB6-FB44-4188-9579-BD265C9803E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,9 +11,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9B323BB6-D37E-46EA-BE47-D61630A3B8E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B323BB6-D37E-46EA-BE47-D61630A3B8E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9B323BB6-D37E-46EA-BE47-D61630A3B8E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B323BB6-D37E-46EA-BE47-D61630A3B8E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B323BB6-D37E-46EA-BE47-D61630A3B8E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B323BB6-D37E-46EA-BE47-D61630A3B8E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2681DEB6-FB44-4188-9579-BD265C9803E4}.Debug|Any CPU.ActiveCfg = Debug
+		{2681DEB6-FB44-4188-9579-BD265C9803E4}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
