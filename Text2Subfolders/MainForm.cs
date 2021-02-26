@@ -46,13 +46,23 @@ namespace Text2Subfolders
 			string[] subfolderNames = textBox1.Lines;
 			// get OS folder delimiter
 			string delimiter = System.IO.Path.DirectorySeparatorChar.ToString();
-			
-			foreach (string name in subfolderNames)
-			{
-				// TODO check for empty lines
-				// TODO check for legal characters
-				System.IO.Directory.CreateDirectory(rootPath + delimiter + name);
-			}
+            try
+            {
+                foreach (string name in subfolderNames)
+                {
+                    // TODO check for empty lines
+                    // TODO check for legal characters
+                    System.IO.Directory.CreateDirectory(rootPath + delimiter + name);
+                }
+                MessageBox.Show("Successfully created " + subfolderNames.Length.ToString()
+                    + " subfolders in " + rootPath, "Success", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error while creating subfolders in " + rootPath + "\n Error is: " + ex.Message, "Error", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
 		}
 
 		private string path = "";
@@ -84,6 +94,10 @@ namespace Text2Subfolders
 		private void textBox2_TextChanged(object sender, EventArgs e)
 		{
 			this.rootPath = textBox2.Text;
+            if (rootPath != String.Empty)
+                button2.Enabled = true;
+            else
+                button2.Enabled = false;
 		}
 	}
 }
